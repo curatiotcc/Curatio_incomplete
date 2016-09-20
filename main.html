@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/framework7.material.colors.min.css">
 		<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/kitchen-sink.css">
-	<!--<script>
+		<!--<script>
         var cache = localStorage.getItem("emailCache");
         if(cache == null){
             window.location.assign("index.html");
@@ -25,6 +25,29 @@
 
   <body class="theme-cyan">
 
+  	<div class="panel-overlay"></div>
+	<div class="panel panel-right panel-cover">
+	<div class="content-block-title">Menu</div>
+	    <div class="list-block inset">
+	    	<ul>
+	    	<a href="#" class="item-link open-popup" data-popup=".popup-perfil">
+	    		<li class="item-content">
+	    		 <div class="item-inner">
+	    		 <p>Perfil</p>
+	    		</div>
+	    		</li>
+	    		</a>
+	    		<a href="#" class="item-link">
+	    		<li class="item-content">
+	    		 <div class="item-inner">
+	    		 <p>Dependentes</p>
+	    			</div>
+	    		</li>
+	    		</a>
+	    	</ul>
+	    </div>
+  	</div>
+
 <div class="views">
 <div class="view view-main" data-page="tabbar">
 <div class="pages navbar-fixed">
@@ -33,14 +56,18 @@
 <div class="navbar-inner">
 <div class="left"></div>
 <div class="center">Curatio</div>
-<div class="right"></div>
+	<div class="right">
+		<a href="#" data-popup=".popup-perfil" class="link icon-only open-panel">
+            <i class="icon icon-bars"></i>
+        </a>
+	</div>
 </div>
 </div>
 <div class="toolbar tabbar tabbar">
 <div class="toolbar-inner">
 <a href="#tab-1" class="tab-link active"><i class="el-search el"></i></a>
 <a href="#tab-2" class="tab-link"><i class="el-plus el"></i></a>
-<a href="#tab-3" class="tab-link"><i class="el-torso el"></i></a>
+<!--<a href="#tab-3" class="tab-link"><i class="el-torso el"></i></a>-->
 <span class="tab-link-highlight" style="width: 33.3333%; transform: translate3d(0%, 0px, 0px);"></span>
 </div>
 </div>
@@ -76,11 +103,9 @@
 </div>
 
 <div id="tab-2" class="page-content tab swiper-slide swiper-slide-next" style="width: 360px;">
-<a href="#" class="floating-button floating-button-to-popover open-popover">
-    <i class="icon icon-plus"></i>
-  </a>
-  
-  
+	<!--<a href="#" class="floating-button floating-button-to-popover open-popover">
+    	<i class="icon icon-plus"></i>
+	</a>-->
 <div class="content-block-title">Marcar consulta</div>
 <div class="list-block inset">
   <ul>
@@ -93,11 +118,6 @@
 			<div class="chip-label"><div id="paciente"></div></div>
 		  </div>
         </div>
-      </div>
-    </li>
-    <li>
-      <div class="item-content">
-        
       </div>
     </li>
     <li>
@@ -115,20 +135,6 @@
       </div>
     </li>
     <li>
-      <div class="item-content">
-        
-      </div>
-    </li>
-    <li>
-      <div class="item-content">
-        
-      </div>
-    </li>
-    <li>
-      <div class="item-content">
-        
-      </div>
-    </li><li>
       <div class="item-content">
         <div class="item-inner">
         <div class="item-title label">Convênio</div>
@@ -152,68 +158,38 @@
 </div>  
 
 </div>
-
-<div id="tab-3" class="page-content tab swiper-slide" style="width: 360px;">
-	<div class="content-block">
-	    <p><div id="nome"></div></p>
-	    <p><div id="email"></div></p>
-	</div>
-	<div class="list-block inset">
-	<p class="buttons-row">
-       	<a href="#" onclick="var calendarDefault = myApp.calendar({input: '#calendar-default',});" data-popup=".popup-cad" class="button button-big button-fill color-cyan open-popup">Cadastrar dependente</a>
-       	
-
-       	</p>
-       	<p class="buttons-row">
-       	<a onclick="localStorage.clear(); window.location.assign('index.html');" href="#" class="button button-big button-fill color-red">Desconectar conta</a>
-       	</p>
-    </div>
-    
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="popup popup-paciente">
+	<div class="popup popup-perfil">
     <div class="view navbar-fixed">
 		<div class="pages">
 		<div class="page">
 		<div class="navbar">
 		<div class="navbar-inner">
-		<div class="center">Alterar paciente</div>
-		<div class="right"><a href="#" class="link close-popup">Confirmar</a></div>
+		<div class="center">Perfil</div>
+		<div class="right"><a href="#" class="link close-popup">Voltar</a></div>
 		</div>
 		</div>
 		<div class="page-content">
-		<div class="content-block-title">Principal</div>
-		<div class="list-block inset">
-			<ul>
-			<li>
-			  <label class="label-radio item-content">
-				<input type="radio" name="browser" value="defaultuser" onclick='newDependent("defaultuser")'>
-				<div class="item-media">
-				  <i class="icon icon-form-radio"></i>
-				</div>
-				<div class="item-inner">
-				  <div class="item-title"><div id="defaultuser"></div></div>
-				</div>
-			  </label>
-			</li>
-		  </ul>
-			<div class="content-block-title">Dependentes</div>
-			<ul>
-				<div value="asd" id="pacientes"></div>
-			</ul>
-		</div>
-			
-		</div>
-		</div>
-		</div>
+		<div class="content-block">
+	    <p><div id="nome"></div></p>
+	    <p><div id="email"></div></p>
 	</div>
-  	</div>
-	
+	<div class="list-block inset">
+       	<p class="buttons-row">
+       	<a onclick="localStorage.clear(); window.location.assign('index.html');" href="#" class="button button-big button-fill color-red">Desconectar conta</a>
+       	</p>
+    </div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+
 	<div class="popup popup-cad">
     <div class="view navbar-fixed">
 		<div class="pages">
@@ -263,7 +239,7 @@
 			</ul>
 		</div>
 		
-		<div class="list-block">
+		<div class="list-block inset">
 			<p><a href="#" onclick="cadDependente()"class="button button-fill color-cyan">Confirmar cadastro</a></p>
 		</div>
 		
@@ -272,42 +248,13 @@
 		</div>
 	</div>
   	</div>
-	<div class="popover">
-  <div class="popover-inner">
-    <div class="list-block">
-      <ul>
-        <li>
-          <a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <div class="item-title">Confirmar</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" onclick="selectDependent()" class="item-content item-link open-popup close-popover" data-popup=".popup-paciente">
-            <div class="item-inner">
-              <div class="item-title">Paciente</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <div class="item-title">Outra</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
     <script>
         document.getElementById("email").innerHTML = localStorage.getItem("emailCache");
         document.getElementById("nome").innerHTML = localStorage.getItem("nomeCache");
 		
 		var patient= localStorage.getItem("nomeCache");
 		document.getElementById("paciente").innerHTML = patient;
-		document.getElementById("defaultuser").innerHTML = patient;
+		//document.getElementById("defaultuser").innerHTML = patient;
 	    
 	var xmlhttp = new XMLHttpRequest();
 
@@ -347,20 +294,7 @@
 	}
 	    
     </script>
-	<script>
-	function newDependent(browser){
-				myApp.showPreloader('Cadastrando...');
-	            setTimeout(function () {
-	            myApp.hidePreloader();
-	            }, 1000);
-		if(browser == "defaultuser"){
-			localStorage.setItem("paciente", localStorage.getItem("nomeCache"));
-		}else{
-			localStorage.setItem("paciente", browser);
-		}
-		document.getElementById("paciente").innerHTML = localStorage.getItem("paciente");
-	}
-	</script>
+
 	<script>
 		function selectDependent(){
 			var xmlhttp = new XMLHttpRequest();
