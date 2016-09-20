@@ -14,27 +14,26 @@
         <link rel="stylesheet" href="css/framework7.material.colors.min.css">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/kitchen-sink.css">
-        <script>
+        <!--<script>
         var cache = localStorage.getItem("emailCache");
         if(cache != null){
             window.location.assign("main.html");
-        }</script>
+        }</script>-->
     </head>
 
     <body class="theme-cyan">
-        <div class="uwrap views">
-            <div class="panel-overlay"></div>
-            <div class="upage vertical-col left view-main view" id="mainpage">
+        <div class="views">
+            <div class="view-main view">
                 <div class="pages">
                     <div class="page">
-                        <div class="page-content upage-content content-area hide-navbar-on-scroll" id="page_61_64" data-ptr-distance="44">
-						<!-- !!! -->
-						<p><div><center><img src="images\xampsont.png"> </img></center></div></p>
-						
-                            <div class="widget uib_w_7 d-margins" data-uib="framework7/list_block" data-ver="0">
+                        <div class="page">
+                        		<div class="content-block">
+                                	<p><img src="images\xampsont.png" width="100%"></p>
+                                </div>
+                            <div class="list-block">
                                 <div class="list-block inset">
                                     <ul>
-                                        <li class="widget uib_w_15 d-margins" data-uib="framework7/input" data-ver="0">
+                                        <li>
                                             <div class="item-content">
                                                 <div class="item-inner">
                                                     <div class="item-title label">Email</div>
@@ -44,7 +43,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="widget uib_w_14 d-margins" data-uib="framework7/input" data-ver="0">
+                                        <li>
                                             <div class="item-content">
                                                 <div class="item-inner">
                                                     <div class="item-title label">Senha</div>
@@ -54,16 +53,23 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="widget uib_w_11 d-margins" data-uib="framework7/list_item" data-ver="0">
-										<a href="#" onclick="myFunction()"class="button button-big color-cyan button-raised">Entrar</a>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=list-block>
+                                <div class="list-block inset">
+                                    <ul>
+                                    	<li>
+											<a href="#" onclick="myFunction()"class="button button-big color-cyan button-raised">Entrar</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="widget uib_w_4 d-margins" data-uib="framework7/list_block" data-ver="0">
+                            <div class=list-block>
                                 <div class="list-block inset">
                                     <ul>
-                                        <li class="widget uib_w_6 d-margins open-panel open-login-screen" data-uib="framework7/list_item" data-ver="0" data-panel="right">
+                                        <li>
                                             <a href="#" class="button button-big button-fill button-raised open-login-screen">Criar Conta</a>
                                         </li>
 
@@ -78,7 +84,7 @@
             </div>
         </div>
 
-        <div class="login-screen body-element uib_w_12" data-uib="framework7/login" data-ver="0">
+        <div class="login-screen">
             <div class="view">
                 <div class="page">
                     <div class="page-content login-screen-content">
